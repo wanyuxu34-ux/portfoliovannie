@@ -1,0 +1,12 @@
+.DS_Store
+outputs/
+work/
+_backup_before_github_*/
+*.tiff
+*.tif
+/*.pdf
+/ins.jpeg
+/抖音.jpeg
+/视频号.jpeg
+
+一键上传GitHub.command
