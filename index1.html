@@ -931,7 +931,7 @@ a{color:inherit;text-decoration:none;}
   height: 100%;
   overflow: hidden;
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba(247,247,241,.96), rgba(255,255,255,.98));
+  background: transparent;
   border: 1.5px solid rgba(2,27,126,.10);
   box-shadow: 0 10px 28px rgba(2,27,126,.10);
 }
@@ -948,7 +948,7 @@ a{color:inherit;text-decoration:none;}
   height: 100%;
   object-fit: contain;
   display: block;
-  background: linear-gradient(135deg, rgba(247,247,241,.96), rgba(255,255,255,.98));
+  background: transparent;
 }
 .cover-card.is-video .cover-card-media::before {
   content: 'PLAY';
@@ -1806,41 +1806,82 @@ a{color:inherit;text-decoration:none;}
 
       <div class="coverflow-shell" id="director-coverflow" aria-label="视频导演作品集 3D 卡片流">
         <div class="coverflow-track">
-          <button class="cover-card is-video" type="button" data-kind="video" data-src="video-directing/video/emotional-bliss-web.m4v" data-poster="video-directing/stills/by-tintin-02.jpg" data-title="Studio™ · Emotional Bliss" data-desc="北京电影学院课程导演作品。以人物情绪、空间留白和镜头节奏构建抽象感受，展示导演叙事、情绪调度和视觉控制能力。" data-meta="BFA Director Work|Narrative|Mood Direction">
-            <span class="cover-card-media"><video muted playsinline preload="metadata" poster="video-directing/stills/by-tintin-02.jpg"><source src="video-directing/video/emotional-bliss-web.m4v" type="video/mp4"></video><span class="cover-card-label"><strong>Emotional Bliss</strong><span>Director Work · BFA</span></span></span>
+          <button class="cover-card is-video" type="button" data-kind="video" data-src="video-directing/video/emotional-bliss-web.m4v" data-poster="video-directing/stills/emotional-bliss-poster.jpg" data-title="Film Directing · Emotional Bliss" data-desc="北京电影学院课程导演作品。以人物情绪、空间留白和镜头节奏构建抽象感受，展示导演叙事、情绪调度和视觉控制能力。" data-meta="Film Directing|BFA Work|Narrative">
+            <span class="cover-card-media"><video muted playsinline preload="metadata" poster="video-directing/stills/emotional-bliss-poster.jpg"><source src="video-directing/video/emotional-bliss-web.m4v" type="video/mp4"></video><span class="cover-card-label"><strong>Emotional Bliss</strong><span>Film Directing</span></span></span>
           </button>
-          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-01.jpg" data-title="Studio™ · BY TINTIN / Silence" data-desc="以人物状态和空间留白建立叙事气质，强调镜头内的沉默张力和克制的情绪表达。" data-meta="Still Frame|Character|Space">
-            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-01.jpg" alt="BY TINTIN 人物情绪静帧" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>人物情绪 · 空间叙事</span></span></span>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-01.jpg" data-title="Film Directing · BY TINTIN 01" data-desc="BY TINTIN 导演静帧，强调人物与空间关系中的沉默张力。" data-meta="Film Directing|BY TINTIN|Still 01">
+            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-01.jpg" alt="BY TINTIN 01" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>Film Directing · 01</span></span></span>
           </button>
-          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-03.jpg" data-title="Studio™ · BY TINTIN / Rhythm" data-desc="通过构图、色彩和人物停顿制造观看悬念，适合延展为社媒短视频叙事资产。" data-meta="Composition|Pacing|Social Cut">
-            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-03.jpg" alt="BY TINTIN 情绪节奏静帧" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>构图 · 色彩 · 调度</span></span></span>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-02.jpg" data-title="Film Directing · BY TINTIN 02" data-desc="BY TINTIN 导演静帧，展示构图控制与角色情绪的聚焦关系。" data-meta="Film Directing|BY TINTIN|Still 02">
+            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-02.jpg" alt="BY TINTIN 02" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>Film Directing · 02</span></span></span>
           </button>
-          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/mercedes-tvc-01.jpg" data-title="Studio™ · Mercedes TVC / Texture" data-desc="商业TVC静帧展示，突出品牌质感、画面秩序和高级生活方式氛围。" data-meta="Commercial|Brand Tone|Texture">
-            <span class="cover-card-media"><img src="video-directing/stills/mercedes-tvc-01.jpg" alt="Mercedes TVC 商业质感静帧" loading="lazy"><span class="cover-card-label"><strong>Mercedes TVC</strong><span>商业质感 · 品牌氛围</span></span></span>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-03.jpg" data-title="Film Directing · BY TINTIN 03" data-desc="BY TINTIN 导演静帧，通过人物停顿和光影强化叙事节奏。" data-meta="Film Directing|BY TINTIN|Still 03">
+            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-03.jpg" alt="BY TINTIN 03" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>Film Directing · 03</span></span></span>
           </button>
-          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/mercedes-tvc-02.jpg" data-title="Studio™ · Mercedes TVC / Scene" data-desc="通过场景关系和光线控制建立品牌叙事，兼顾视觉高级感与传播清晰度。" data-meta="Lighting|Scene|Lifestyle">
-            <span class="cover-card-media"><img src="video-directing/stills/mercedes-tvc-02.jpg" alt="Mercedes TVC 场景调性静帧" loading="lazy"><span class="cover-card-label"><strong>Mercedes TVC</strong><span>场景调性 · 光线控制</span></span></span>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-04.jpg" data-title="Film Directing · BY TINTIN 04" data-desc="BY TINTIN 导演静帧，强化空间留白和人物视线方向的表达。" data-meta="Film Directing|BY TINTIN|Still 04">
+            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-04.jpg" alt="BY TINTIN 04" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>Film Directing · 04</span></span></span>
           </button>
-          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/yinyang-teaser-01.jpg" data-title="Studio™ · YINYANG Teaser" data-desc="服务音乐厂牌传播的竖版预热视频视觉，适配移动端平台与内容预热节奏。" data-meta="Music Label|Vertical Video|Teaser">
-            <span class="cover-card-media"><img src="video-directing/stills/yinyang-teaser-01.jpg" alt="YINYANG Teaser 竖版静帧" loading="lazy"><span class="cover-card-label"><strong>YINYANG Teaser</strong><span>竖版短片 · 社媒预热</span></span></span>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-05.jpg" data-title="Film Directing · BY TINTIN 05" data-desc="BY TINTIN 导演静帧，利用画面留白与人物关系制造观看停顿。" data-meta="Film Directing|BY TINTIN|Still 05">
+            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-05.jpg" alt="BY TINTIN 05" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>Film Directing · 05</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-06.jpg" data-title="Film Directing · BY TINTIN 06" data-desc="BY TINTIN 导演静帧，突出细节纹理与气氛塑造。" data-meta="Film Directing|BY TINTIN|Still 06">
+            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-06.jpg" alt="BY TINTIN 06" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>Film Directing · 06</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-07.jpg" data-title="Film Directing · BY TINTIN 07" data-desc="BY TINTIN 导演静帧，完成角色与环境之间的氛围收束。" data-meta="Film Directing|BY TINTIN|Still 07">
+            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-07.jpg" alt="BY TINTIN 07" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>Film Directing · 07</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/mercedes-tvc-01.jpg" data-title="Editing · Frame 01" data-desc="剪辑作品静帧，突出商业画面节奏与品牌质感。" data-meta="Editing|Commercial|Frame 01">
+            <span class="cover-card-media"><img src="video-directing/stills/mercedes-tvc-01.jpg" alt="Editing Frame 01" loading="lazy"><span class="cover-card-label"><strong>Editing</strong><span>Commercial Frame · 01</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/mercedes-tvc-02.jpg" data-title="Editing · Frame 02" data-desc="剪辑作品静帧，展示场景调度与镜头衔接的清晰度。" data-meta="Editing|Commercial|Frame 02">
+            <span class="cover-card-media"><img src="video-directing/stills/mercedes-tvc-02.jpg" alt="Editing Frame 02" loading="lazy"><span class="cover-card-label"><strong>Editing</strong><span>Commercial Frame · 02</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/mercedes-tvc-03.jpg" data-title="Editing · Frame 03" data-desc="剪辑作品静帧，强调节奏起伏与画面组织。" data-meta="Editing|Commercial|Frame 03">
+            <span class="cover-card-media"><img src="video-directing/stills/mercedes-tvc-03.jpg" alt="Editing Frame 03" loading="lazy"><span class="cover-card-label"><strong>Editing</strong><span>Commercial Frame · 03</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/mercedes-tvc-04.jpg" data-title="Editing · Frame 04" data-desc="剪辑作品静帧，体现广告叙事中的镜头完成度。" data-meta="Editing|Commercial|Frame 04">
+            <span class="cover-card-media"><img src="video-directing/stills/mercedes-tvc-04.jpg" alt="Editing Frame 04" loading="lazy"><span class="cover-card-label"><strong>Editing</strong><span>Commercial Frame · 04</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/film-art-01.jpg" data-title="Film Art Work · 01" data-desc="电影美术作品静帧，关注场景造型与材质氛围。" data-meta="Film Art Work|Set Design|01">
+            <span class="cover-card-media"><img src="video-directing/stills/film-art-01.jpg" alt="Film Art Work 01" loading="lazy"><span class="cover-card-label"><strong>Film Art Work</strong><span>Still · 01</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/film-art-02.jpg" data-title="Film Art Work · 02" data-desc="电影美术作品静帧，展示道具、布局与空间层次。" data-meta="Film Art Work|Set Design|02">
+            <span class="cover-card-media"><img src="video-directing/stills/film-art-02.jpg" alt="Film Art Work 02" loading="lazy"><span class="cover-card-label"><strong>Film Art Work</strong><span>Still · 02</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/film-art-03.jpg" data-title="Film Art Work · 03" data-desc="电影美术作品静帧，强调色彩组织与场景结构。" data-meta="Film Art Work|Set Design|03">
+            <span class="cover-card-media"><img src="video-directing/stills/film-art-03.jpg" alt="Film Art Work 03" loading="lazy"><span class="cover-card-label"><strong>Film Art Work</strong><span>Still · 03</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/film-art-04.jpg" data-title="Film Art Work · 04" data-desc="电影美术作品静帧，突出镜头内的画面平衡与空间秩序。" data-meta="Film Art Work|Set Design|04">
+            <span class="cover-card-media"><img src="video-directing/stills/film-art-04.jpg" alt="Film Art Work 04" loading="lazy"><span class="cover-card-label"><strong>Film Art Work</strong><span>Still · 04</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/film-art-05.jpg" data-title="Film Art Work · 05" data-desc="电影美术作品静帧，展示装置与道具关系。" data-meta="Film Art Work|Set Design|05">
+            <span class="cover-card-media"><img src="video-directing/stills/film-art-05.jpg" alt="Film Art Work 05" loading="lazy"><span class="cover-card-label"><strong>Film Art Work</strong><span>Still · 05</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/film-art-06.jpg" data-title="Film Art Work · 06" data-desc="电影美术作品静帧，强调局部细节与画面气质。" data-meta="Film Art Work|Set Design|06">
+            <span class="cover-card-media"><img src="video-directing/stills/film-art-06.jpg" alt="Film Art Work 06" loading="lazy"><span class="cover-card-label"><strong>Film Art Work</strong><span>Still · 06</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/film-art-07.jpg" data-title="Film Art Work · 07" data-desc="电影美术作品静帧，完成整体场景视觉节奏。" data-meta="Film Art Work|Set Design|07">
+            <span class="cover-card-media"><img src="video-directing/stills/film-art-07.jpg" alt="Film Art Work 07" loading="lazy"><span class="cover-card-label"><strong>Film Art Work</strong><span>Still · 07</span></span></span>
+          </button>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/yinyang-teaser-01.jpg" data-title="AIGC · YINYANG Teaser" data-desc="AIGC 相关静帧，服务音乐厂牌内容预热和视觉概念生成。" data-meta="AIGC|Music Label|Vertical">
+            <span class="cover-card-media"><img src="video-directing/stills/yinyang-teaser-01.jpg" alt="AIGC YINYANG Teaser" loading="lazy"><span class="cover-card-label"><strong>AIGC</strong><span>YINYANG Teaser</span></span></span>
           </button>
         </div>
         <div class="coverflow-nav">
           <button class="coverflow-arrow" type="button" data-coverflow-prev aria-label="上一张">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <div class="coverflow-current" id="coverflow-current">Studio™ · Emotional Bliss<span class="coverflow-count">01 / 06</span></div>
+          <div class="coverflow-current" id="coverflow-current">Film Directing · Emotional Bliss<span class="coverflow-count">01 / 20</span></div>
           <button class="coverflow-arrow" type="button" data-coverflow-next aria-label="下一张">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
       </div>
-
       <div id="director-expand" class="director-expand" aria-hidden="true">
         <div class="director-expand-mask" data-expand-close></div>
         <div class="director-expanded-card" id="director-expanded-card"></div>
         <div class="director-detail-panel" id="director-detail-panel">
-          <h4 id="director-detail-title">Studio™ · Emotional Bliss</h4>
+          <h4 id="director-detail-title">Film Directing · Emotional Bliss</h4>
           <p id="director-detail-desc">北京电影学院课程导演作品。</p>
           <div class="meta" id="director-detail-meta"></div>
         </div>
@@ -1854,7 +1895,7 @@ a{color:inherit;text-decoration:none;}
           <button class="coverflow-ctrl" type="button" data-expand-prev aria-label="上一张">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
-          <span class="label" id="director-expand-label">Studio™ · Emotional Bliss</span>
+          <span class="label" id="director-expand-label">Film Directing · Emotional Bliss</span>
           <button class="coverflow-ctrl" type="button" data-expand-next aria-label="下一张">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
