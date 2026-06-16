@@ -825,258 +825,317 @@ a{color:inherit;text-decoration:none;}
 .deck-lb-img-wrap { overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; }
 .deck-lb-img-wrap img { width: 100%; display: block; }
 .director-section {
-  margin-top: 38px;
-  border: 1.5px solid rgba(2,27,126,.10);
-  border-radius: 8px;
+  margin-top: 42px;
+  position: relative;
   overflow: hidden;
+  border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(255,255,255,.94), rgba(143,219,251,.16) 48%, rgba(245,233,114,.22)),
-    #fff;
-  box-shadow: 0 12px 34px rgba(2,27,126,.08);
+    linear-gradient(140deg, rgba(2,27,126,.96), rgba(5,7,22,.98) 50%, rgba(230,82,10,.76)),
+    #050711;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,.16);
+  box-shadow: 0 22px 60px rgba(2,27,126,.22);
+  isolation: isolate;
 }
-.director-head {
+.director-section::before {
+  content: '';
+  position: absolute;
+  inset: -40% -20%;
+  background:
+    radial-gradient(circle at 26% 38%, rgba(143,219,251,.24), transparent 24%),
+    radial-gradient(circle at 80% 22%, rgba(245,233,114,.20), transparent 22%),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: auto, auto, 42px 42px;
+  transform: rotate(-10deg);
+  opacity: .8;
+  z-index: -1;
+}
+.director-studio-head {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 16px;
+  grid-template-columns: minmax(0,1fr) minmax(220px, .72fr);
+  gap: 18px;
   align-items: end;
-  padding: 22px 22px 16px;
-  border-bottom: 1.5px solid rgba(2,27,126,.08);
+  padding: 26px 24px 6px;
 }
 .director-kicker {
+  color: rgba(245,233,114,.92);
   font-size: .62rem;
+  font-weight: 900;
   letter-spacing: .18em;
-  color: var(--rust);
-  font-weight: 800;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 .director-title {
   font-family: 'CH','Noto Sans SC',sans-serif;
-  font-size: clamp(1.45rem, 4.2vw, 2.15rem);
-  line-height: 1.05;
-  color: var(--navy);
+  font-size: clamp(1.8rem, 6vw, 3.35rem);
+  line-height: .95;
+  letter-spacing: .02em;
   font-weight: 900;
 }
 .director-desc {
-  max-width: 420px;
-  color: rgba(2,27,126,.62);
+  color: rgba(255,255,255,.70);
   font-size: .72rem;
   line-height: 1.75;
 }
-.director-stage {
-  display: grid;
-  grid-template-columns: minmax(260px, .95fr) minmax(0, 1.2fr);
-  gap: 14px;
-  padding: 16px;
+.coverflow-shell {
+  position: relative;
+  min-height: clamp(430px, 64vw, 560px);
+  padding: 18px 0 86px;
+  perspective: 1400px;
+  user-select: none;
+  touch-action: pan-y;
 }
-.director-video-card,
-.director-copy-card {
-  border-radius: 8px;
-  border: 1.5px solid rgba(2,27,126,.10);
-  background: rgba(255,255,255,.84);
-  overflow: hidden;
+.coverflow-track {
+  position: relative;
+  height: clamp(285px, 42vw, 390px);
+  margin: 10px auto 0;
+  transform-style: preserve-3d;
 }
-.director-video-card {
-  box-shadow: 0 10px 24px rgba(0,0,0,.10);
-}
-.director-video-card video {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
-  background: #111;
-}
-.director-video-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 12px 12px;
-  color: var(--navy);
-}
-.director-video-meta strong {
-  display: block;
-  font-size: .78rem;
-  line-height: 1.3;
-}
-.director-video-meta span {
-  display: block;
-  margin-top: 3px;
-  font-size: .62rem;
-  color: var(--mu);
-  line-height: 1.45;
-}
-.director-pill {
-  align-self: flex-start;
-  white-space: nowrap;
-  border: 1px solid rgba(230,82,10,.18);
-  color: var(--rust);
-  background: rgba(255,255,255,.7);
-  border-radius: 100px;
-  padding: 5px 9px;
-  font-size: .6rem;
-  font-weight: 800;
-}
-.director-copy-card {
-  padding: 15px;
-  display: grid;
-  align-content: center;
-  gap: 12px;
-}
-.director-points {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-.director-point {
-  min-height: 88px;
-  border-radius: 8px;
-  padding: 12px;
-  background: rgba(255,255,255,.72);
-  border: 1px solid rgba(2,27,126,.08);
-}
-.director-point b {
-  display: block;
-  color: var(--navy);
-  font-size: .7rem;
-  margin-bottom: 6px;
-}
-.director-point span {
-  display: block;
-  color: rgba(2,27,126,.60);
-  font-size: .62rem;
-  line-height: 1.55;
-}
-.director-rail-wrap {
-  padding: 0 16px 18px;
-}
-.director-rail {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  padding: 2px 2px 12px;
-  -webkit-overflow-scrolling: touch;
-}
-.director-rail::-webkit-scrollbar { height: 7px; }
-.director-rail::-webkit-scrollbar-thumb { background: rgba(2,27,126,.18); border-radius: 100px; }
-.director-frame {
-  flex: 0 0 clamp(210px, 32vw, 312px);
-  scroll-snap-align: start;
+.cover-card {
+  --x: 0px;
+  --scale: 1;
+  --rot: 0deg;
+  --alpha: 1;
+  --z: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(220px, 41vw, 395px);
+  aspect-ratio: 16 / 10.5;
+  transform:
+    translate(-50%, -50%)
+    translateX(var(--x))
+    translateZ(calc(var(--scale) * 42px))
+    rotateY(var(--rot))
+    scale(var(--scale));
+  z-index: var(--z);
+  opacity: var(--alpha);
   border: 0;
   padding: 0;
   background: transparent;
-  cursor: zoom-in;
-  text-align: left;
+  cursor: grab;
+  transition: filter .28s ease, opacity .28s ease;
+  transform-origin: center;
 }
-.director-frame-inner {
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1.5px solid rgba(2,27,126,.10);
-  background: #fff;
-  box-shadow: 0 5px 18px rgba(2,27,126,.07);
-  transition: transform .24s cubic-bezier(.34,1.56,.64,1), box-shadow .24s, border-color .24s;
-}
-.director-frame:hover .director-frame-inner {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(2,27,126,.13);
-  border-color: rgba(230,82,10,.24);
-}
-.director-frame img {
+.cover-card:active { cursor: grabbing; }
+.cover-card.is-center { cursor: zoom-in; }
+.cover-card-media {
+  position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #111;
+  border: 1.5px solid rgba(255,255,255,.22);
+  box-shadow: 0 24px 56px rgba(0,0,0,.42);
+}
+.cover-card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 56%, rgba(0,0,0,.58));
+  pointer-events: none;
+}
+.cover-card img,
+.cover-card video {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
-.director-frame.portrait img { aspect-ratio: 3 / 4; }
-.director-caption {
-  padding: 8px 10px 10px;
+.cover-card.is-video .cover-card-media::before {
+  content: 'PLAY';
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  z-index: 2;
+  color: #050711;
+  background: rgba(245,233,114,.92);
+  border-radius: 100px;
+  padding: 6px 9px;
+  font-size: .58rem;
+  font-weight: 900;
+  letter-spacing: .08em;
 }
-.director-caption strong {
+.cover-card-label {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 12px;
+  z-index: 2;
+  text-align: left;
+}
+.cover-card-label strong {
   display: block;
-  color: var(--navy);
-  font-size: .68rem;
+  color: #fff;
+  font-size: .78rem;
+  line-height: 1.25;
+}
+.cover-card-label span {
+  display: block;
+  margin-top: 3px;
+  color: rgba(255,255,255,.68);
+  font-size: .62rem;
   line-height: 1.35;
 }
-.director-caption span {
-  display: block;
-  margin-top: 2px;
-  color: var(--mu);
-  font-size: .6rem;
-  line-height: 1.45;
+.coverflow-nav {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 28px;
+  z-index: 1200;
+  display: grid;
+  grid-template-columns: auto minmax(0,1fr) auto;
+  align-items: center;
+  gap: 12px;
 }
-.director-lb {
+.coverflow-arrow,
+.coverflow-ctrl {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.28);
+  background: rgba(255,255,255,.10);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: transform .2s, background .2s, color .2s;
+}
+.coverflow-arrow:hover,
+.coverflow-ctrl:hover { transform: translateY(-2px); background: rgba(245,233,114,.92); color: #050711; }
+.coverflow-current {
+  min-width: 0;
+  text-align: center;
+  font-family: 'CH','Noto Sans SC',sans-serif;
+  font-size: clamp(1rem, 3.2vw, 1.55rem);
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: .02em;
+  color: #fff;
+  transition: opacity .22s ease, transform .22s ease;
+}
+.coverflow-current.fade {
+  opacity: 0;
+  transform: translateY(7px);
+}
+.coverflow-count {
+  display: block;
+  margin-top: 7px;
+  font-family: 'Inter','Noto Sans SC',sans-serif;
+  color: rgba(255,255,255,.54);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+}
+.director-expand {
   position: fixed;
   inset: 0;
-  z-index: 1300;
+  z-index: 1500;
   display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  pointer-events: none;
 }
-.director-lb.open { display: flex; }
-.director-lb-mask {
+.director-expand.open {
+  display: block;
+  pointer-events: auto;
+}
+.director-expand-mask {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,.84);
-  backdrop-filter: blur(16px);
-  cursor: pointer;
+  background: rgba(2,4,16,.82);
+  backdrop-filter: blur(18px);
+  opacity: 0;
+  transition: opacity .42s ease;
 }
-.director-lb-box {
-  position: relative;
-  z-index: 1;
-  width: min(980px, 95vw);
-  max-height: 90vh;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
+.director-expand.open .director-expand-mask { opacity: 1; }
+.director-expanded-card {
+  position: absolute;
   overflow: hidden;
   border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 30px 90px rgba(0,0,0,.52);
+  background: #050711;
+  box-shadow: 0 34px 100px rgba(0,0,0,.58);
+  transition: left .48s cubic-bezier(.2,.9,.18,1), top .48s cubic-bezier(.2,.9,.18,1), width .48s cubic-bezier(.2,.9,.18,1), height .48s cubic-bezier(.2,.9,.18,1);
 }
-.director-lb-img {
-  min-height: 0;
-  background: #050505;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.director-lb-img img {
+.director-expanded-card img,
+.director-expanded-card video {
   width: 100%;
-  max-height: 90vh;
+  height: 100%;
   object-fit: contain;
   display: block;
+  background: #050711;
 }
-.director-lb-info {
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border-left: 1.5px solid var(--bd);
-}
-.director-lb-info strong {
-  color: var(--navy);
-  font-size: .9rem;
-  line-height: 1.35;
-}
-.director-lb-info span {
-  color: var(--mu);
-  font-size: .68rem;
-  line-height: 1.65;
-}
-.director-lb-close {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1.5px solid var(--bd);
-  background: #fff;
-  color: var(--navy);
-  cursor: pointer;
+.director-expand-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 24px);
+  opacity: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: auto;
+  gap: 9px;
+  padding: 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.10);
+  backdrop-filter: blur(18px);
+  transition: opacity .38s ease .18s, transform .38s ease .18s;
 }
-.director-lb-close:hover { background: var(--navy); color: #fff; }
+.director-expand.open .director-expand-controls {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+.director-expand-controls .label {
+  color: rgba(255,255,255,.78);
+  font-size: .66rem;
+  padding: 0 7px;
+  white-space: nowrap;
+}
+.director-detail-panel {
+  position: absolute;
+  right: 24px;
+  bottom: 88px;
+  width: min(330px, calc(100vw - 48px));
+  padding: 18px;
+  border-radius: 8px;
+  background: rgba(255,255,255,.94);
+  color: var(--navy);
+  box-shadow: 0 22px 70px rgba(0,0,0,.38);
+  transform: translateY(26px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .32s ease, transform .32s cubic-bezier(.2,.9,.18,1);
+}
+.director-detail-panel.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.director-detail-panel h4 {
+  margin: 0 0 8px;
+  font-size: .96rem;
+  line-height: 1.25;
+}
+.director-detail-panel p {
+  margin: 0;
+  color: rgba(2,27,126,.66);
+  font-size: .7rem;
+  line-height: 1.75;
+}
+.director-detail-panel .meta {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.director-detail-panel .meta span {
+  border-radius: 100px;
+  padding: 5px 8px;
+  background: rgba(2,27,126,.06);
+  color: rgba(2,27,126,.72);
+  font-size: .58rem;
+  font-weight: 800;
+}
 @media (max-width: 600px) {
   .audience-flow { grid-template-columns: 1fr; }
   .aud-arrow { transform: rotate(90deg); min-height: 36px; }
@@ -1086,13 +1145,15 @@ a{color:inherit;text-decoration:none;}
   .ip-overview-grid { grid-template-columns: 1fr; }
   .deck-grid { grid-template-columns: repeat(2, 1fr); }
   .deck-cover { padding: 22px 18px; min-height: 110px; }
-  .director-head,.director-stage { grid-template-columns: 1fr; }
-  .director-head { align-items: start; padding: 18px; }
-  .director-stage { padding: 12px; }
-  .director-points { grid-template-columns: 1fr; }
-  .director-frame { flex-basis: 78vw; }
-  .director-lb-box { grid-template-columns: 1fr; }
-  .director-lb-info { border-left: 0; border-top: 1.5px solid var(--bd); }
+  .director-studio-head { grid-template-columns: 1fr; padding: 20px 18px 0; }
+  .coverflow-shell { min-height: 470px; padding-bottom: 106px; }
+  .coverflow-track { height: 330px; }
+  .cover-card { width: min(76vw, 300px); }
+  .coverflow-nav { left: 14px; right: 14px; bottom: 20px; grid-template-columns: 36px minmax(0,1fr) 36px; }
+  .director-expand-controls { left: 12px; right: 12px; bottom: 18px; transform: translateY(24px); justify-content: center; flex-wrap: wrap; border-radius: 8px; }
+  .director-expand.open .director-expand-controls { transform: translateY(0); }
+  .director-expand-controls .label { order: -1; width: 100%; text-align: center; }
+  .director-detail-panel { right: 12px; bottom: 116px; width: calc(100vw - 24px); }
 }
 @media (max-width: 380px) {
   .social-grid,.poster-grid { grid-template-columns: 1fr; }
@@ -1725,81 +1786,73 @@ a{color:inherit;text-decoration:none;}
     </div>
 
     <section class="director-section rv" id="director-portfolio">
-      <div class="director-head">
+      <div class="director-studio-head">
         <div>
           <div class="director-kicker" data-zh="FILM DIRECTING PORTFOLIO" data-en="FILM DIRECTING PORTFOLIO">FILM DIRECTING PORTFOLIO</div>
           <h3 class="director-title" data-zh="视频导演作品集" data-en="Video Directing Portfolio">视频导演作品集</h3>
         </div>
-        <p class="director-desc" data-zh="以影像叙事、人物情绪和品牌调性为核心，展示从学生导演作品到商业TVC、音乐厂牌短片的画面控制与内容表达能力。" data-en="A curated view of visual storytelling, emotional direction and brand tone across a student short film, commercial TVC frames and music-label teaser work.">
-          以影像叙事、人物情绪和品牌调性为核心，展示从学生导演作品到商业TVC、音乐厂牌短片的画面控制与内容表达能力。
+        <p class="director-desc" data-zh="3D 卡片流展示导演短片、商业TVC与音乐厂牌预热视频静帧；支持滚轮、拖拽、点击全屏展开与详情查看。" data-en="A 3D coverflow for short-film directing, commercial TVC stills and music-label teaser visuals, with wheel, drag, full-screen expansion and details.">
+          3D 卡片流展示导演短片、商业TVC与音乐厂牌预热视频静帧；支持滚轮、拖拽、点击全屏展开与详情查看。
         </p>
       </div>
 
-      <div class="director-stage">
-        <article class="director-video-card">
-          <video controls preload="metadata" poster="video-directing/stills/by-tintin-02.jpg">
-            <source src="video-directing/video/emotional-bliss-web.m4v" type="video/mp4">
-          </video>
-          <div class="director-video-meta">
-            <div>
-              <strong data-zh="《Emotional Bliss》导演作品" data-en="Emotional Bliss · Directed Work">《Emotional Bliss》导演作品</strong>
-              <span data-zh="北京电影学院课程作品 · 导演 / 影像叙事 / 情绪调度" data-en="Beijing Film Academy coursework · directing / visual storytelling / emotional pacing">北京电影学院课程作品 · 导演 / 影像叙事 / 情绪调度</span>
-            </div>
-            <span class="director-pill" data-zh="点击播放" data-en="Play">点击播放</span>
-          </div>
-        </article>
-        <article class="director-copy-card">
-          <div class="director-points">
-            <div class="director-point">
-              <b data-zh="导演表达" data-en="Direction">导演表达</b>
-              <span data-zh="把抽象情绪转译为可感知的空间、节奏与人物状态。" data-en="Translates abstract emotion into space, pacing and character state.">把抽象情绪转译为可感知的空间、节奏与人物状态。</span>
-            </div>
-            <div class="director-point">
-              <b data-zh="商业审美" data-en="Commercial Eye">商业审美</b>
-              <span data-zh="适配品牌视觉语言，控制画面质感、构图和氛围。" data-en="Adapts brand visual language through texture, composition and atmosphere.">适配品牌视觉语言，控制画面质感、构图和氛围。</span>
-            </div>
-            <div class="director-point">
-              <b data-zh="社媒转化" data-en="Social Fit">社媒转化</b>
-              <span data-zh="将短片、静帧与预热视频拆解为可传播的社媒内容资产。" data-en="Turns films, stills and teasers into shareable social content assets.">将短片、静帧与预热视频拆解为可传播的社媒内容资产。</span>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="director-rail-wrap">
-        <div class="director-rail" aria-label="视频导演作品静帧">
-          <button class="director-frame" type="button" data-src="video-directing/stills/by-tintin-01.jpg" data-title="BY TINTIN · 人物情绪" data-desc="以人物状态和空间留白建立叙事气质，强调镜头内的沉默张力。">
-            <span class="director-frame-inner"><img src="video-directing/stills/by-tintin-01.jpg" alt="BY TINTIN 人物情绪静帧" loading="lazy"><span class="director-caption"><strong>BY TINTIN</strong><span>人物情绪 · 空间叙事</span></span></span>
+      <div class="coverflow-shell" id="director-coverflow" aria-label="视频导演作品集 3D 卡片流">
+        <div class="coverflow-track">
+          <button class="cover-card is-video" type="button" data-kind="video" data-src="video-directing/video/emotional-bliss-web.m4v" data-poster="video-directing/stills/by-tintin-02.jpg" data-title="Studio™ · Emotional Bliss" data-desc="北京电影学院课程导演作品。以人物情绪、空间留白和镜头节奏构建抽象感受，展示导演叙事、情绪调度和视觉控制能力。" data-meta="BFA Director Work|Narrative|Mood Direction">
+            <span class="cover-card-media"><video muted playsinline preload="metadata" poster="video-directing/stills/by-tintin-02.jpg"><source src="video-directing/video/emotional-bliss-web.m4v" type="video/mp4"></video><span class="cover-card-label"><strong>Emotional Bliss</strong><span>Director Work · BFA</span></span></span>
           </button>
-          <button class="director-frame" type="button" data-src="video-directing/stills/by-tintin-02.jpg" data-title="BY TINTIN · 画面控制" data-desc="以构图、色彩和动作调度强化人物关系，形成干净克制的视觉表达。">
-            <span class="director-frame-inner"><img src="video-directing/stills/by-tintin-02.jpg" alt="BY TINTIN 画面控制静帧" loading="lazy"><span class="director-caption"><strong>BY TINTIN</strong><span>构图 · 色彩 · 调度</span></span></span>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-01.jpg" data-title="Studio™ · BY TINTIN / Silence" data-desc="以人物状态和空间留白建立叙事气质，强调镜头内的沉默张力和克制的情绪表达。" data-meta="Still Frame|Character|Space">
+            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-01.jpg" alt="BY TINTIN 人物情绪静帧" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>人物情绪 · 空间叙事</span></span></span>
           </button>
-          <button class="director-frame" type="button" data-src="video-directing/stills/by-tintin-03.jpg" data-title="BY TINTIN · 情绪节奏" data-desc="通过镜头节奏与人物停顿制造观看悬念，适合延展为社媒短视频叙事。">
-            <span class="director-frame-inner"><img src="video-directing/stills/by-tintin-03.jpg" alt="BY TINTIN 情绪节奏静帧" loading="lazy"><span class="director-caption"><strong>BY TINTIN</strong><span>情绪节奏 · 叙事停顿</span></span></span>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-03.jpg" data-title="Studio™ · BY TINTIN / Rhythm" data-desc="通过构图、色彩和人物停顿制造观看悬念，适合延展为社媒短视频叙事资产。" data-meta="Composition|Pacing|Social Cut">
+            <span class="cover-card-media"><img src="video-directing/stills/by-tintin-03.jpg" alt="BY TINTIN 情绪节奏静帧" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>构图 · 色彩 · 调度</span></span></span>
           </button>
-          <button class="director-frame" type="button" data-src="video-directing/stills/mercedes-tvc-01.jpg" data-title="Mercedes TVC · 商业质感" data-desc="商业TVC静帧展示，突出品牌质感、画面秩序和高级生活方式氛围。">
-            <span class="director-frame-inner"><img src="video-directing/stills/mercedes-tvc-01.jpg" alt="Mercedes TVC 商业质感静帧" loading="lazy"><span class="director-caption"><strong>Mercedes TVC</strong><span>商业质感 · 品牌氛围</span></span></span>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/mercedes-tvc-01.jpg" data-title="Studio™ · Mercedes TVC / Texture" data-desc="商业TVC静帧展示，突出品牌质感、画面秩序和高级生活方式氛围。" data-meta="Commercial|Brand Tone|Texture">
+            <span class="cover-card-media"><img src="video-directing/stills/mercedes-tvc-01.jpg" alt="Mercedes TVC 商业质感静帧" loading="lazy"><span class="cover-card-label"><strong>Mercedes TVC</strong><span>商业质感 · 品牌氛围</span></span></span>
           </button>
-          <button class="director-frame" type="button" data-src="video-directing/stills/mercedes-tvc-02.jpg" data-title="Mercedes TVC · 场景调性" data-desc="通过场景关系和光线控制建立品牌叙事，兼顾视觉高级感与传播清晰度。">
-            <span class="director-frame-inner"><img src="video-directing/stills/mercedes-tvc-02.jpg" alt="Mercedes TVC 场景调性静帧" loading="lazy"><span class="director-caption"><strong>Mercedes TVC</strong><span>场景调性 · 光线控制</span></span></span>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/mercedes-tvc-02.jpg" data-title="Studio™ · Mercedes TVC / Scene" data-desc="通过场景关系和光线控制建立品牌叙事，兼顾视觉高级感与传播清晰度。" data-meta="Lighting|Scene|Lifestyle">
+            <span class="cover-card-media"><img src="video-directing/stills/mercedes-tvc-02.jpg" alt="Mercedes TVC 场景调性静帧" loading="lazy"><span class="cover-card-label"><strong>Mercedes TVC</strong><span>场景调性 · 光线控制</span></span></span>
           </button>
-          <button class="director-frame portrait" type="button" data-src="video-directing/stills/yinyang-teaser-01.jpg" data-title="YINYANG Teaser · 社媒短片" data-desc="服务音乐厂牌传播的竖版预热视频视觉，适配移动端平台与内容预热节奏。">
-            <span class="director-frame-inner"><img src="video-directing/stills/yinyang-teaser-01.jpg" alt="YINYANG Teaser 竖版静帧" loading="lazy"><span class="director-caption"><strong>YINYANG Teaser</strong><span>竖版短片 · 社媒预热</span></span></span>
+          <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/yinyang-teaser-01.jpg" data-title="Studio™ · YINYANG Teaser" data-desc="服务音乐厂牌传播的竖版预热视频视觉，适配移动端平台与内容预热节奏。" data-meta="Music Label|Vertical Video|Teaser">
+            <span class="cover-card-media"><img src="video-directing/stills/yinyang-teaser-01.jpg" alt="YINYANG Teaser 竖版静帧" loading="lazy"><span class="cover-card-label"><strong>YINYANG Teaser</strong><span>竖版短片 · 社媒预热</span></span></span>
+          </button>
+        </div>
+        <div class="coverflow-nav">
+          <button class="coverflow-arrow" type="button" data-coverflow-prev aria-label="上一张">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="coverflow-current" id="coverflow-current">Studio™ · Emotional Bliss<span class="coverflow-count">01 / 06</span></div>
+          <button class="coverflow-arrow" type="button" data-coverflow-next aria-label="下一张">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
       </div>
 
-      <div id="director-lb" class="director-lb">
-        <div class="director-lb-mask" onclick="closeDirectorLB()"></div>
-        <div class="director-lb-box">
-          <div class="director-lb-img"><img id="director-lb-img" src="" alt="视频导演作品静帧大图"></div>
-          <div class="director-lb-info">
-            <button class="director-lb-close" onclick="closeDirectorLB()" aria-label="关闭">
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 2l11 11M13 2L2 13" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
-            </button>
-            <strong id="director-lb-title">视频导演作品</strong>
-            <span id="director-lb-desc">点击静帧查看导演作品说明。</span>
-          </div>
+      <div id="director-expand" class="director-expand" aria-hidden="true">
+        <div class="director-expand-mask" data-expand-close></div>
+        <div class="director-expanded-card" id="director-expanded-card"></div>
+        <div class="director-detail-panel" id="director-detail-panel">
+          <h4 id="director-detail-title">Studio™ · Emotional Bliss</h4>
+          <p id="director-detail-desc">北京电影学院课程导演作品。</p>
+          <div class="meta" id="director-detail-meta"></div>
+        </div>
+        <div class="director-expand-controls">
+          <button class="coverflow-ctrl" type="button" data-expand-play aria-label="播放/暂停">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 3.5v9l7-4.5-7-4.5z" fill="currentColor"/></svg>
+          </button>
+          <button class="coverflow-ctrl" type="button" data-expand-details aria-label="打开详情">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 4h10M3 8h10M3 12h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+          <button class="coverflow-ctrl" type="button" data-expand-prev aria-label="上一张">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span class="label" id="director-expand-label">Studio™ · Emotional Bliss</span>
+          <button class="coverflow-ctrl" type="button" data-expand-next aria-label="下一张">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="coverflow-ctrl" type="button" data-expand-close aria-label="关闭">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -2227,36 +2280,212 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') { closeDeckLB(); closeDirectorLB(); }
 });
 
-/* ── DIRECTOR PORTFOLIO LIGHTBOX ── */
-document.addEventListener('click', function(e) {
-  var frame = e.target.closest ? e.target.closest('.director-frame') : null;
-  if (!frame) return;
-  openDirectorLB(
-    frame.getAttribute('data-src'),
-    frame.getAttribute('data-title') || '视频导演作品',
-    frame.getAttribute('data-desc') || ''
-  );
-});
+/* ── DIRECTOR PORTFOLIO COVERFLOW ── */
+(function() {
+  var shell = document.getElementById('director-coverflow');
+  if (!shell) return;
+  var cards = Array.prototype.slice.call(shell.querySelectorAll('.cover-card'));
+  var label = document.getElementById('coverflow-current');
+  var expand = document.getElementById('director-expand');
+  var expandedCard = document.getElementById('director-expanded-card');
+  var expandLabel = document.getElementById('director-expand-label');
+  var detailPanel = document.getElementById('director-detail-panel');
+  var detailTitle = document.getElementById('director-detail-title');
+  var detailDesc = document.getElementById('director-detail-desc');
+  var detailMeta = document.getElementById('director-detail-meta');
+  var target = 0;
+  var current = 0;
+  var velocity = 0;
+  var isDown = false;
+  var dragStart = 0;
+  var dragBase = 0;
+  var expandedIndex = -1;
+  var expandedMedia = null;
 
-function openDirectorLB(src, title, desc) {
-  var lb = document.getElementById('director-lb');
-  if (!lb || !src) return;
-  document.getElementById('director-lb-img').src = src;
-  document.getElementById('director-lb-title').textContent = title;
-  document.getElementById('director-lb-desc').textContent = desc;
-  lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeDirectorLB() {
-  var lb = document.getElementById('director-lb');
-  if (!lb) return;
-  lb.classList.remove('open');
-  document.body.style.overflow = '';
-  setTimeout(function() {
-    var img = document.getElementById('director-lb-img');
-    if (img) img.src = '';
-  }, 250);
-}
+  function clamp(v) { return Math.max(0, Math.min(cards.length - 1, v)); }
+  function setTarget(v) {
+    var next = clamp(v);
+    if (next !== target) {
+      target = next;
+      syncLabel();
+    }
+  }
+  function nearest() { return Math.round(target); }
+  function cardData(i) {
+    var card = cards[i];
+    return {
+      kind: card.getAttribute('data-kind'),
+      src: card.getAttribute('data-src'),
+      poster: card.getAttribute('data-poster'),
+      title: card.getAttribute('data-title') || '',
+      desc: card.getAttribute('data-desc') || '',
+      meta: (card.getAttribute('data-meta') || '').split('|').filter(Boolean)
+    };
+  }
+  function syncLabel() {
+    var i = nearest();
+    if (!label) return;
+    label.classList.add('fade');
+    window.setTimeout(function() {
+      var data = cardData(i);
+      label.innerHTML = data.title + '<span class="coverflow-count">' + String(i + 1).padStart(2, '0') + ' / ' + String(cards.length).padStart(2, '0') + '</span>';
+      label.classList.remove('fade');
+    }, 120);
+  }
+  function layout() {
+    current += (target - current) * .13;
+    velocity *= .82;
+    current += velocity;
+    if (Math.abs(target - current) < .001) current = target;
+    cards.forEach(function(card, i) {
+      var d = i - current;
+      var ad = Math.abs(d);
+      var sign = d < 0 ? -1 : 1;
+      var scale = Math.max(.54, 1 - ad * .18);
+      var x = d * 168 - sign * Math.max(0, ad - 1) * 32;
+      var rot = -d * 18;
+      var alpha = ad > 3.4 ? 0 : Math.max(.18, 1 - ad * .22);
+      var z = Math.round(1000 - ad * 100);
+      card.style.setProperty('--x', x + 'px');
+      card.style.setProperty('--scale', scale.toFixed(3));
+      card.style.setProperty('--rot', rot.toFixed(2) + 'deg');
+      card.style.setProperty('--alpha', alpha.toFixed(3));
+      card.style.setProperty('--z', z);
+      card.classList.toggle('is-center', Math.round(current) === i && ad < .54);
+      card.style.filter = ad > .55 ? 'saturate(.72) brightness(.74) blur(' + Math.min(1.8, ad * .38).toFixed(2) + 'px)' : 'none';
+    });
+    requestAnimationFrame(layout);
+  }
+
+  shell.addEventListener('wheel', function(e) {
+    if (Math.abs(e.deltaY) < Math.abs(e.deltaX) && Math.abs(e.deltaX) < 3) return;
+    e.preventDefault();
+    velocity += (e.deltaY + e.deltaX) * .0018;
+    setTarget(target + (e.deltaY + e.deltaX) * .0042);
+  }, { passive: false });
+
+  shell.addEventListener('pointerdown', function(e) {
+    isDown = true;
+    dragStart = e.clientX;
+    dragBase = target;
+    shell.setPointerCapture && shell.setPointerCapture(e.pointerId);
+  });
+  shell.addEventListener('pointermove', function(e) {
+    if (!isDown) return;
+    var dx = e.clientX - dragStart;
+    setTarget(dragBase - dx / 210);
+  });
+  function endDrag(e) {
+    if (!isDown) return;
+    isDown = false;
+    setTarget(nearest());
+    shell.releasePointerCapture && shell.releasePointerCapture(e.pointerId);
+  }
+  shell.addEventListener('pointerup', endDrag);
+  shell.addEventListener('pointercancel', endDrag);
+
+  cards.forEach(function(card, i) {
+    card.addEventListener('click', function() {
+      if (Math.abs(i - target) > .45) {
+        setTarget(i);
+        return;
+      }
+      openExpand(i, card);
+    });
+  });
+
+  function makeMedia(data) {
+    if (data.kind === 'video') {
+      var video = document.createElement('video');
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = 'metadata';
+      if (data.poster) video.poster = data.poster;
+      var source = document.createElement('source');
+      source.src = data.src;
+      source.type = 'video/mp4';
+      video.appendChild(source);
+      return video;
+    }
+    var img = document.createElement('img');
+    img.src = data.src;
+    img.alt = data.title;
+    return img;
+  }
+  function fillDetails(data) {
+    expandLabel.textContent = data.title;
+    detailTitle.textContent = data.title;
+    detailDesc.textContent = data.desc;
+    detailMeta.innerHTML = data.meta.map(function(m) { return '<span>' + m + '</span>'; }).join('');
+  }
+  function openExpand(i, card) {
+    expandedIndex = i;
+    var data = cardData(i);
+    var rect = card.querySelector('.cover-card-media').getBoundingClientRect();
+    expandedCard.innerHTML = '';
+    expandedMedia = makeMedia(data);
+    expandedCard.appendChild(expandedMedia);
+    fillDetails(data);
+    detailPanel.classList.remove('open');
+    expand.classList.add('open');
+    expand.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    expandedCard.style.left = rect.left + 'px';
+    expandedCard.style.top = rect.top + 'px';
+    expandedCard.style.width = rect.width + 'px';
+    expandedCard.style.height = rect.height + 'px';
+    expandedCard.getBoundingClientRect();
+    var vw = window.innerWidth;
+    var vh = window.innerHeight;
+    var w = Math.min(vw * .86, 1040);
+    var h = Math.min(vh * .72, w * .62);
+    if (vw < 600) { w = vw - 24; h = Math.min(vh * .58, w * .9); }
+    requestAnimationFrame(function() {
+      expandedCard.style.left = ((vw - w) / 2) + 'px';
+      expandedCard.style.top = ((vh - h) / 2 - 18) + 'px';
+      expandedCard.style.width = w + 'px';
+      expandedCard.style.height = h + 'px';
+    });
+  }
+  function closeExpand() {
+    expand.classList.remove('open');
+    expand.setAttribute('aria-hidden', 'true');
+    detailPanel.classList.remove('open');
+    document.body.style.overflow = '';
+    if (expandedMedia && expandedMedia.pause) expandedMedia.pause();
+    window.setTimeout(function() { expandedCard.innerHTML = ''; expandedMedia = null; }, 420);
+  }
+  function swapExpanded(step) {
+    if (expandedIndex < 0) return;
+    expandedIndex = clamp(expandedIndex + step);
+    setTarget(expandedIndex);
+    var data = cardData(expandedIndex);
+    expandedCard.innerHTML = '';
+    expandedMedia = makeMedia(data);
+    expandedCard.appendChild(expandedMedia);
+    fillDetails(data);
+  }
+  function togglePlay() {
+    if (!expandedMedia || !expandedMedia.play) return;
+    if (expandedMedia.paused) expandedMedia.play(); else expandedMedia.pause();
+  }
+
+  document.querySelector('[data-coverflow-prev]')?.addEventListener('click', function() { setTarget(nearest() - 1); });
+  document.querySelector('[data-coverflow-next]')?.addEventListener('click', function() { setTarget(nearest() + 1); });
+  document.querySelectorAll('[data-expand-close]').forEach(function(btn) { btn.addEventListener('click', closeExpand); });
+  document.querySelector('[data-expand-prev]')?.addEventListener('click', function() { swapExpanded(-1); });
+  document.querySelector('[data-expand-next]')?.addEventListener('click', function() { swapExpanded(1); });
+  document.querySelector('[data-expand-play]')?.addEventListener('click', togglePlay);
+  document.querySelector('[data-expand-details]')?.addEventListener('click', function() { detailPanel.classList.toggle('open'); });
+  document.addEventListener('keydown', function(e) {
+    if (!expand.classList.contains('open')) return;
+    if (e.key === 'Escape') closeExpand();
+    if (e.key === 'ArrowLeft') swapExpanded(-1);
+    if (e.key === 'ArrowRight') swapExpanded(1);
+  });
+  syncLabel();
+  layout();
+})();
 </script>
 </body>
 </html>
