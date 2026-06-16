@@ -947,6 +947,7 @@ a{color:inherit;text-decoration:none;}
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center center;
   display: block;
   background: transparent;
 }
@@ -963,6 +964,28 @@ a{color:inherit;text-decoration:none;}
   font-size: .58rem;
   font-weight: 900;
   letter-spacing: .08em;
+}
+.cover-card-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.44);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 0 10px 28px rgba(0,0,0,.16);
+}
+.cover-card-play svg {
+  margin-left: 4px;
+  color: #fff;
 }
 .cover-card-label {
   position: absolute;
@@ -1331,8 +1354,8 @@ a{color:inherit;text-decoration:none;}
       <div class="card yinyang-card">
         <div class="ctop">
           <div>
-            <div class="co" data-zh="音洋 PRODUCTIONS · 电子音乐品牌" data-en="Yinyang Productions · Electronic Music Brand">音洋 PRODUCTIONS · 电子音乐品牌</div>
-            <div class="role" data-zh="创始人 / 主理人" data-en="Founder / Brand Director">创始人 / 主理人</div>
+            <div class="co" data-zh="音洋 PRODUCTIONS · 电子音乐品牌" data-en="YinYang Productions · electronic music label">音洋 PRODUCTIONS · 电子音乐品牌</div>
+            <div class="role" data-zh="创始人 / 主理人" data-en="Founder & Creative Director">创始人 / 主理人</div>
           </div>
           <span class="badge now" data-zh="2024.12 - 至今" data-en="Dec 2024 - Present">2024.12 - 至今</span>
         </div>
@@ -1346,21 +1369,21 @@ a{color:inherit;text-decoration:none;}
   <li class="plain" style="font-weight:600;color:var(--navy);">
     <span data-zh="▎品牌化运营与矩阵策略" data-en="▎Brand Operations & Matrix Strategy">▎品牌化运营与矩阵策略</span>
   </li>
-  <li data-zh="从0构建电子音乐品牌全套运营体系，制定公众号/小红书/抖音三端内容矩阵策略，锚定年轻高知女性核心受众，小红书1年涨粉1万+，获赞16.7万，单条视频点赞10万+" data-en="Built electronic music brand operations from scratch; designed a three-platform content matrix across WeChat, Xiaohongshu and Douyin; targeted educated young women; gained 10K+ XHS followers in one year, 167K likes and one 100K+ liked video">从0构建电子音乐品牌全套运营体系，制定公众号/小红书/抖音三端内容矩阵策略，锚定年轻高知女性核心受众，小红书1年涨粉1万+，获赞16.7万，单条视频点赞10万+</li>
-  <li data-zh="监测平台数据（CTR/曝光/转化），持续优化内容选题与发布策略，多条文化观察内容成为爆款，维护12个500人私域粉丝群，构建清晰的垂类爆款到品牌转化路径" data-en="Monitored platform data (CTR/impressions/conversion) to refine content strategy; multiple viral culture pieces; maintained 12×500-person private communities; built clear viral-to-conversion funnel">监测平台数据（CTR/曝光/转化），持续优化内容选题与发布策略，多条文化观察内容成为爆款，维护12个500人私域粉丝群，构建清晰的垂类爆款到品牌转化路径</li>
+  <li data-zh="从0构建电子音乐品牌全套运营体系，制定公众号/小红书/抖音三端内容矩阵策略，锚定年轻高知女性核心受众，小红书1年涨粉1万+，获赞16.7万，单条视频点赞10万+" data-en="Planned and produced 30+ immersive rave and cultural events across venues including Workers' Stadium and Beijing Ancient City Wall, attracting 200-600 attendees per event.">从0构建电子音乐品牌全套运营体系，制定公众号/小红书/抖音三端内容矩阵策略，锚定年轻高知女性核心受众，小红书1年涨粉1万+，获赞16.7万，单条视频点赞10万+</li>
+  <li data-zh="监测平台数据（CTR/曝光/转化），持续优化内容选题与发布策略，多条文化观察内容成为爆款，维护12个500人私域粉丝群，构建清晰的垂类爆款到品牌转化路径" data-en="Expanded electronic music audiences through cross-cultural programming that integrated fashion, traditional performance art, and community experiences.">监测平台数据（CTR/曝光/转化），持续优化内容选题与发布策略，多条文化观察内容成为爆款，维护12个500人私域粉丝群，构建清晰的垂类爆款到品牌转化路径</li>
 
   <li class="plain" style="font-weight:600;color:var(--navy);margin-top:6px;">
     <span data-zh="▎受众破圈 · 品牌知名度提升" data-en="▎Audience Expansion · Brand Awareness">▎受众破圈 · 品牌知名度提升</span>
   </li>
-  <li data-zh="成功将受众从音乐细分人群（小众女性/北京）拓展至大众生活方式赛道（女性70%/北京·上海·成都多城市覆盖），覆盖时尚、运动、文化等兴趣圈层" data-en="Expanded the audience from a Beijing-based niche music crowd into a broader lifestyle audience: 70% women, multi-city reach across Beijing, Shanghai, Chengdu and more, spanning fashion, sports and culture interests">成功将受众从音乐细分人群（小众女性/北京）拓展至大众生活方式赛道（女性70%/北京·上海·成都多城市覆盖），覆盖时尚、运动、文化等兴趣圈层</li>
-  <li data-zh="打造「白天Rave」等标志性品牌事件，产出差异化内容（「为什么中国年轻人需要白天Rave」），获《V Magazine》专题报道与悦游Traveler特邀快闪呈现，实现主流媒体认可" data-en="Created signature brand events like 'Daytime Rave'; produced differentiated content; earned V Magazine feature and Condé Nast Traveler China pop-up invitation">打造「白天Rave」等标志性品牌事件，产出差异化内容（「为什么中国年轻人需要白天Rave」），获《V Magazine》专题报道与悦游Traveler特邀快闪呈现，实现主流媒体认可</li>
+  <li data-zh="成功将受众从音乐细分人群（小众女性/北京）拓展至大众生活方式赛道（女性70%/北京·上海·成都多城市覆盖），覆盖时尚、运动、文化等兴趣圈层" data-en="Led end-to-end planning for a sold-out 600-person Workers' Stadium event, increasing pre-launch conversion by 60% through tiered ticketing and phased early-bird campaigns.">成功将受众从音乐细分人群（小众女性/北京）拓展至大众生活方式赛道（女性70%/北京·上海·成都多城市覆盖），覆盖时尚、运动、文化等兴趣圈层</li>
+  <li data-zh="打造「白天Rave」等标志性品牌事件，产出差异化内容（「为什么中国年轻人需要白天Rave」），获《V Magazine》专题报道与悦游Traveler特邀快闪呈现，实现主流媒体认可" data-en="Reduced artist costs by 70% through talent partnerships and resource exchange, reallocating budget toward stage and sound upgrades; with a total cost of RMB 30,000, generated RMB 80,000 net profit through beverage sales and marketplace partnerships.">打造「白天Rave」等标志性品牌事件，产出差异化内容（「为什么中国年轻人需要白天Rave」），获《V Magazine》专题报道与悦游Traveler特邀快闪呈现，实现主流媒体认可</li>
 
   <li class="plain" style="font-weight:600;color:var(--navy);margin-top:6px;">
     <span data-zh="▎线下活动策划 · 执行落地" data-en="▎Offline Event Planning & Execution">▎线下活动策划 · 执行落地</span>
   </li>
-  <li data-zh="独立策划30+场沉浸式品牌活动（明城墙·工人体育场等非常规场景），单场报名稳定200-600人（因场地限流），受知名品牌特邀演出10+场，覆盖12个城市" data-en="Solo-planned 30+ immersive brand events (Ming Wall, Workers' Stadium, non-conventional venues); 200-600 registrations per event; 10+ brand invitations; 12-city coverage">独立策划30+场沉浸式品牌活动（明城墙·工人体育场等非常规场景），单场报名稳定200-600人（因场地限流），受知名品牌特邀演出10+场，覆盖12个城市</li>
-  <li data-zh="通过跨界文化融合（高校服装设计获奖作品走秀/京剧元素/艺术市集联动）实现社媒自发裂变传播，持续提升品牌用户活跃度与跨圈层认知" data-en="Cross-cultural integration (student fashion shows, Peking Opera, art markets) triggered organic viral spread on social media, boosting brand activation and cross-vertical awareness">通过跨界文化融合（高校服装设计获奖作品走秀/京剧元素/艺术市集联动）实现社媒自发裂变传播，持续提升品牌用户活跃度与跨圈层认知</li>
-  <li data-zh="协调官方平台资源：整合SKP商务活动、NEED市集（国内青年文化市集第一梯队）等合作资源，负责品牌联络维护与商务落地" data-en="Coordinated platform partnerships: SKP commercial events, NEED Market (top youth culture market); handled brand liaison and commercial execution">协调官方平台资源：整合SKP商务活动、NEED市集（国内青年文化市集第一梯队）等合作资源，负责品牌联络维护与商务落地</li>
+  <li data-zh="独立策划30+场沉浸式品牌活动（明城墙·工人体育场等非常规场景），单场报名稳定200-600人（因场地限流），受知名品牌特邀演出10+场，覆盖12个城市" data-en="Grew Xiaohongshu account to 10K+ followers and 167K+ likes within one year, with multiple viral posts exceeding 100K likes.">独立策划30+场沉浸式品牌活动（明城墙·工人体育场等非常规场景），单场报名稳定200-600人（因场地限流），受知名品牌特邀演出10+场，覆盖12个城市</li>
+  <li data-zh="通过跨界文化融合（高校服装设计获奖作品走秀/京剧元素/艺术市集联动）实现社媒自发裂变传播，持续提升品牌用户活跃度与跨圈层认知" data-en="Built and managed 12 private communities with 500 members each, converting 500+ users into private communities through trend-driven culture content and editorial storytelling.">通过跨界文化融合（高校服装设计获奖作品走秀/京剧元素/艺术市集联动）实现社媒自发裂变传播，持续提升品牌用户活跃度与跨圈层认知</li>
+  <li data-zh="协调官方平台资源：整合SKP商务活动、NEED市集（国内青年文化市集第一梯队）等合作资源，负责品牌联络维护与商务落地" data-en="Incubated and managed 10-15 DJs, leading artist branding, visual identity, promotional content, and performance strategy; managed partnerships with brands and venues including SKP, NEED Market, 798 Art District, and Qihao Art Museum.">协调官方平台资源：整合SKP商务活动、NEED市集（国内青年文化市集第一梯队）等合作资源，负责品牌联络维护与商务落地</li>
   <li class="plain" style="font-weight:600;color:var(--navy);margin-top:6px;">
     <span data-zh="▎代表案例 · 工人体育场大型活动全链路 campaign" data-en="▎Representative Case · Workers' Stadium Full-Funnel Campaign">▎代表案例 · 工人体育场大型活动全链路 campaign</span>
   </li>
@@ -1487,8 +1510,8 @@ a{color:inherit;text-decoration:none;}
       <div class="card">
         <div class="ctop">
           <div>
-            <div class="co" data-zh="浙江知因科技（心理AI产品）" data-en="Zhiyin Tech (Psychological AI Product)">浙江知因科技（心理AI产品）</div>
-            <div class="role" data-zh="新媒体编辑-市场负责人" data-en="New Media Editor / Marketing Lead">新媒体编辑-市场负责人</div>
+            <div class="co" data-zh="浙江知因科技（心理AI产品）" data-en="Zhiyin Technology · AI Mental Wellness App">浙江知因科技（心理AI产品）</div>
+            <div class="role" data-zh="新媒体编辑-市场负责人" data-en="Social Media Editor-Head of Marketing">新媒体编辑-市场负责人</div>
           </div>
           <span class="badge now">2025.05 - 2026.05</span>
         </div>
@@ -1496,14 +1519,14 @@ a{color:inherit;text-decoration:none;}
   <li class="plain" style="font-weight:600;color:var(--navy);">
     <span data-zh="▎品牌增长全链路" data-en="▎Full-Funnel Brand Growth">▎品牌增长全链路</span>
   </li>
-  <li data-zh="主导品牌从冷启动至规模化增长，统筹公众号/小红书/抖音三端运营，全平台粉丝5000+，App上线半年注册用户从0增长至3000+" data-en="Led brand from cold-start to scaled growth; managed tri-platform operations; 5000+ total followers; 0→3000+ app registrations in 6 months">主导品牌从冷启动至规模化增长，统筹公众号/小红书/抖音三端运营，全平台粉丝5000+，App上线半年注册用户从0增长至3000+</li>
-  <li data-zh="分析平台数据，持续优化内容与运营策略，公众号30日阅读量超54万，单篇爆款阅读达40万+，赞藏18000+，实现用户活跃度与内容质量双提升" data-en="Analyzed platform data to optimize content strategy; WeChat account: 540K+ reads/30 days, 400K+ per viral article, 18K+ likes & saves">分析平台数据，持续优化内容与运营策略，公众号30日阅读量超54万，单篇爆款阅读达40万+，赞藏18000+，实现用户活跃度与内容质量双提升</li>
+  <li data-zh="主导品牌从冷启动至规模化增长，统筹公众号/小红书/抖音三端运营，全平台粉丝5000+，App上线半年注册用户从0增长至3000+" data-en="Led WeChat, Xiaohongshu, and Douyin operations, growing total social following from 0 to 7K+ for the AI Mental Wellness App.">主导品牌从冷启动至规模化增长，统筹公众号/小红书/抖音三端运营，全平台粉丝5000+，App上线半年注册用户从0增长至3000+</li>
+  <li data-zh="分析平台数据，持续优化内容与运营策略，公众号30日阅读量超54万，单篇爆款阅读达40万+，赞藏18000+，实现用户活跃度与内容质量双提升" data-en="Achieved 540K+ WeChat article reads within 30 days, with a top-performing article exceeding 400K+ reads; drove Xiaohongshu content growth with single-post impressions reaching 2.41M+.">分析平台数据，持续优化内容与运营策略，公众号30日阅读量超54万，单篇爆款阅读达40万+，赞藏18000+，实现用户活跃度与内容质量双提升</li>
 
   <li class="plain" style="font-weight:600;color:var(--navy);margin-top:6px;">
     <span data-zh="▎平台策略运营 · 达人投放" data-en="▎Platform Strategy · KOL Campaigns">▎平台策略运营 · 达人投放</span>
   </li>
-  <li data-zh="制定并执行线上推广活动，构建标准化KOL筛选模型（22万+粉丝高画像匹配），CPM低至13.9元，关注转化率提升12.5%" data-en="Planned and executed online promotional campaigns; built standardized KOL screening model (220K+ followers, high-fit profile match); CPM as low as ¥13.9; follower conversion rate +12.5%">制定并执行线上推广活动，构建标准化KOL筛选模型（22万+粉丝高画像匹配），CPM低至13.9元，关注转化率提升12.5%</li>
-  <li data-zh="深度参与AI语料设计与NLP全流程，将用户洞察转化为AI对话模型的情感表达策略；通过AI工具将内容产出周期从2-3天压缩至4小时，支撑团队每周5-6篇高频输出" data-en="Contributed deeply to AI corpus design and the NLP workflow; translated user insights into emotional expression strategies for AI dialogue; reduced content production time from 2-3 days to 4 hours with AI tools, supporting 5-6 posts per week">深度参与AI语料设计与NLP全流程，将用户洞察转化为AI对话模型的情感表达策略；通过AI工具将内容产出周期从2-3天压缩至4小时，支撑团队每周5-6篇高频输出</li>
+  <li data-zh="制定并执行线上推广活动，构建标准化KOL筛选模型（22万+粉丝高画像匹配），CPM低至13.9元，关注转化率提升12.5%" data-en="Independently managed Xiaohongshu influencer campaigns with a total budget of RMB 8,000, building ROI-driven creator allocation strategies across conversion-focused review creators and broad-reach emotional content creators.">制定并执行线上推广活动，构建标准化KOL筛选模型（22万+粉丝高画像匹配），CPM低至13.9元，关注转化率提升12.5%</li>
+  <li data-zh="深度参与AI语料设计与NLP全流程，将用户洞察转化为AI对话模型的情感表达策略；通过AI工具将内容产出周期从2-3天压缩至4小时，支撑团队每周5-6篇高频输出" data-en="Developed a KOL evaluation model that delivered 570K+ total impressions, 12.28% CTR, RMB 0.11 CPC, 0.86% CVR, and RMB 13 CAC; leveraged Claude and ChatGPT to cut short-form content production from 2-3 days to 4 hours.">深度参与AI语料设计与NLP全流程，将用户洞察转化为AI对话模型的情感表达策略；通过AI工具将内容产出周期从2-3天压缩至4小时，支撑团队每周5-6篇高频输出</li>
 
   <li class="plain" style="font-weight:600;color:var(--navy);margin-top:6px;">
     <span data-zh="▎资源整合与平台联络" data-en="▎Resource Integration & Platform Relations">▎资源整合与平台联络</span>
@@ -1661,7 +1684,7 @@ a{color:inherit;text-decoration:none;}
         <div class="ctop">
           <div>
             <div class="co" data-zh="时尚芭莎" data-en="Harper's Bazaar China">时尚芭莎</div>
-            <div class="role" data-zh="文化艺术部编辑（实习）" data-en="Culture & Arts Dept. Editor (Intern)">文化艺术部编辑（实习）</div>
+            <div class="role" data-zh="文化艺术部编辑（实习）" data-en="Freelance Writer & Editor">文化艺术部编辑（实习）</div>
           </div>
           <span class="badge" data-zh="2024.09 - 2025.01" data-en="Sep 2024 - Jan 2025">2024.09 - 2025.01</span>
         </div>
@@ -1670,9 +1693,9 @@ a{color:inherit;text-decoration:none;}
           <li class="plain" style="font-weight:600;color:var(--navy);">
             <span data-zh="▎全案策划 · 新媒体运营" data-en="▎Full-Cycle Planning · New Media Operations">▎全案策划 · 新媒体运营</span>
           </li>
-          <li data-zh="独立完成「黄景瑜丹东美食季」「乌镇戏剧节」「通用汽车公路片」等项目全案新媒体策划，单条tag微博286.7万阅读，2.1万讨论" data-en="Solo-handled full new media planning for projects including Huang Jingyu Dandong Food Festival, Wuzhen Theatre Festival, and GM Road Trip; single Weibo tag: 2.867M reads, 21K discussions">独立完成「黄景瑜丹东美食季」「乌镇戏剧节」「通用汽车公路片」等项目全案新媒体策划，单条tag微博286.7万阅读，2.1万讨论</li>
-          <li data-zh="主导BAZAAR ART小红书内容运营，持续监测平台数据优化选题风格，粉丝量同比增长15%" data-en="Led BAZAAR ART Xiaohongshu operations; continuously monitored data to refine content direction; +15% YoY follower growth">主导BAZAAR ART小红书内容运营，持续监测平台数据优化选题风格，粉丝量同比增长15%</li>
-          <li data-zh="负责社内时尚晚宴等品牌活动艺人统筹（含外籍艺人对接）及摄制、场地协调，具备完整的线下活动落地执行经验" data-en="Coordinated artist logistics for brand events including fashion gala (incl. international artists); handled photography, venue coordination; complete offline event execution experience">负责社内时尚晚宴等品牌活动艺人统筹（含外籍艺人对接）及摄制、场地协调，具备完整的线下活动落地执行经验</li>
+          <li data-zh="独立完成「黄景瑜丹东美食季」「乌镇戏剧节」「通用汽车公路片」等项目全案新媒体策划，单条tag微博286.7万阅读，2.1万讨论" data-en="Produced branded editorial and content campaigns for leading consumer brands including Lancôme and Dreame, with a strong understanding of fashion, beauty, and FMCG communication strategies.">独立完成「黄景瑜丹东美食季」「乌镇戏剧节」「通用汽车公路片」等项目全案新媒体策划，单条tag微博286.7万阅读，2.1万讨论</li>
+          <li data-zh="主导BAZAAR ART小红书内容运营，持续监测平台数据优化选题风格，粉丝量同比增长15%" data-en="Specialized in transforming emerging social trends into fashion and culture narratives with strong audience resonance; produced feature coverage for the 2026 Milan Winter Olympics, with single articles exceeding 100K+ views.">主导BAZAAR ART小红书内容运营，持续监测平台数据优化选题风格，粉丝量同比增长15%</li>
+          <li data-zh="负责社内时尚晚宴等品牌活动艺人统筹（含外籍艺人对接）及摄制、场地协调，具备完整的线下活动落地执行经验" data-en="Experienced in media communications, branded storytelling, and content commercialization strategy.">负责社内时尚晚宴等品牌活动艺人统筹（含外籍艺人对接）及摄制、场地协调，具备完整的线下活动落地执行经验</li>
         </ul>
         <div class="tags">
           <span class="t" data-zh="全案新媒体策划" data-en="Full-Cycle New Media Planning">全案新媒体策划</span>
@@ -1689,22 +1712,22 @@ a{color:inherit;text-decoration:none;}
       <div class="card">
         <div class="ctop">
           <div>
-            <div class="co" data-zh="阔景音乐" data-en="Kuojing Music Entertainment">阔景音乐</div>
+            <div class="co" data-zh="阔景音乐" data-en="Kuojing Music">阔景音乐</div>
             <div class="role" data-zh="娱乐营销部实习生" data-en="Entertainment Marketing Intern">娱乐营销部实习生</div>
           </div>
           <span class="badge" data-zh="2024.06 - 2024.10" data-en="Jun - Oct 2024">2024.06 - 2024.10</span>
         </div>
-        <p class="desc" data-zh="「第二届浪潮音乐大赏」/ 「薛之谦出道二十周年」" data-en="2nd Wave Music Awards · Xue Zhiqian 20th Anniversary">「第二届浪潮音乐大赏」/ 「薛之谦出道二十周年」</p>
+        <p class="desc" data-zh="「第二届浪潮音乐大赏」/ 「薛之谦出道二十周年」" data-en="Projects included: 2nd Wave Music Awards · Joker Xue 20th Anniversary">「第二届浪潮音乐大赏」/ 「薛之谦出道二十周年」</p>
         <ul class="pts">
           <li class="plain" style="font-weight:600;color:var(--navy);">
             <span data-zh="▎艺人统筹 · 活动执行" data-en="▎Artist Coordination · Event Execution">▎艺人统筹 · 活动执行</span>
           </li>
-          <li data-zh="统筹15组艺人团队与导演组全程动线对接，对接窦靖童、袁娅维、回春丹等艺人及经纪团队，独立负责行程协调、演唱节目要求同步，提前锁定每位艺人cue点、舞台时序与机位分配，确保零延误完成直播录制。" data-en="Coordinated full-route alignment between 15 artist teams and the directing team; liaised with artists and management teams including Dou Jingtong, Yuan Yawei and Huichundan; independently managed schedules, performance requirements, cue points, stage timing and camera allocation, ensuring zero-delay live recording.">统筹15组艺人团队与导演组全程动线对接，对接窦靖童、袁娅维、回春丹等艺人及经纪团队，独立负责行程协调、演唱节目要求同步，提前锁定每位艺人cue点、舞台时序与机位分配，确保零延误完成直播录制。</li>
+          <li data-zh="统筹15组艺人团队与导演组全程动线对接，对接窦靖童、袁娅维、回春丹等艺人及经纪团队，独立负责行程协调、演唱节目要求同步，提前锁定每位艺人cue点、舞台时序与机位分配，确保零延误完成直播录制。" data-en="Coordinated artist teams, managed scheduling, backstage communication, and on-site production coordination.">统筹15组艺人团队与导演组全程动线对接，对接窦靖童、袁娅维、回春丹等艺人及经纪团队，独立负责行程协调、演唱节目要求同步，提前锁定每位艺人cue点、舞台时序与机位分配，确保零延误完成直播录制。</li>
           <li class="plain" style="font-weight:600;color:var(--navy);margin-top:6px;">
             <span data-zh="▎营销策划 · KOL投放" data-en="▎Marketing Planning · KOL Campaigns">▎营销策划 · KOL投放</span>
           </li>
-          <li data-zh="主导薛之谦出道二十周年活动事件营销策划方案，筛选联名品牌方与合作场地，策划粉丝向周边礼包（参考王菲出道35周年黑胶精选套装）" data-en="Led event marketing plan for Xue Zhiqian 20th Anniversary; screened co-branding partners and venues; designed fan merchandise packages (benchmarked against Faye Wong 35th Anniversary vinyl collection)">主导薛之谦出道二十周年活动事件营销策划方案，筛选联名品牌方与合作场地，策划粉丝向周边礼包（参考王菲出道35周年黑胶精选套装）</li>
-          <li data-zh="构建标准化KOL筛选模型（22万+粉丝高画像匹配），以CPM低至13.9元实现关注转化率提升12.5%，具备可复用的达人投放数据模型" data-en="Built a standardized KOL screening model (220K+ followers, high audience-fit profile match); achieved CPM as low as ¥13.9 and +12.5% follower conversion rate; developed a reusable KOL performance model">构建标准化KOL筛选模型（22万+粉丝高画像匹配），以CPM低至13.9元实现关注转化率提升12.5%，具备可复用的达人投放数据模型</li>
+          <li data-zh="主导薛之谦出道二十周年活动事件营销策划方案，筛选联名品牌方与合作场地，策划粉丝向周边礼包（参考王菲出道35周年黑胶精选套装）" data-en="Participated in anniversary campaign ideation and event marketing for Joker Xue.">主导薛之谦出道二十周年活动事件营销策划方案，筛选联名品牌方与合作场地，策划粉丝向周边礼包（参考王菲出道35周年黑胶精选套装）</li>
+          <li data-zh="构建标准化KOL筛选模型（22万+粉丝高画像匹配），以CPM低至13.9元实现关注转化率提升12.5%，具备可复用的达人投放数据模型" data-en="Assisted with co-branding partnerships, venue sourcing, and merchandise planning.">构建标准化KOL筛选模型（22万+粉丝高画像匹配），以CPM低至13.9元实现关注转化率提升12.5%，具备可复用的达人投放数据模型</li>
         </ul>
         <div class="tags">
           <span class="t" data-zh="艺人统筹" data-en="Artist Coordination">艺人统筹</span>
@@ -1807,7 +1830,7 @@ a{color:inherit;text-decoration:none;}
       <div class="coverflow-shell" id="director-coverflow" aria-label="视频导演作品集 3D 卡片流">
         <div class="coverflow-track">
           <button class="cover-card is-video" type="button" data-kind="video" data-src="video-directing/video/emotional-bliss-web.m4v" data-poster="video-directing/stills/emotional-bliss-poster.jpg" data-title="Film Directing · Emotional Bliss" data-desc="北京电影学院课程导演作品。以人物情绪、空间留白和镜头节奏构建抽象感受，展示导演叙事、情绪调度和视觉控制能力。" data-meta="Film Directing|BFA Work|Narrative">
-            <span class="cover-card-media"><video muted playsinline preload="metadata" poster="video-directing/stills/emotional-bliss-poster.jpg"><source src="video-directing/video/emotional-bliss-web.m4v" type="video/mp4"></video><span class="cover-card-label"><strong>Emotional Bliss</strong><span>Film Directing</span></span></span>
+            <span class="cover-card-media"><video muted playsinline preload="metadata" poster="video-directing/stills/emotional-bliss-poster.jpg"><source src="video-directing/video/emotional-bliss-web.m4v" type="video/mp4"></video><span class="cover-card-play" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M7 5.5v11l9-5.5-9-5.5z" fill="currentColor"/></svg></span><span class="cover-card-label"><strong>Emotional Bliss</strong><span>Film Directing</span></span></span>
           </button>
           <button class="cover-card" type="button" data-kind="image" data-src="video-directing/stills/by-tintin-01.jpg" data-title="Film Directing · BY TINTIN 01" data-desc="BY TINTIN 导演静帧，强调人物与空间关系中的沉默张力。" data-meta="Film Directing|BY TINTIN|Still 01">
             <span class="cover-card-media"><img src="video-directing/stills/by-tintin-01.jpg" alt="BY TINTIN 01" loading="lazy"><span class="cover-card-label"><strong>BY TINTIN</strong><span>Film Directing · 01</span></span></span>
