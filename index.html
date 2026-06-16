@@ -827,38 +827,43 @@ a{color:inherit;text-decoration:none;}
 .director-section {
   margin-top: 42px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 8px;
-  background:
-    linear-gradient(140deg, rgba(2,27,126,.96), rgba(5,7,22,.98) 50%, rgba(230,82,10,.76)),
-    #050711;
-  color: #fff;
-  border: 1.5px solid rgba(255,255,255,.16);
-  box-shadow: 0 22px 60px rgba(2,27,126,.22);
+  background: rgba(255,255,255,.94);
+  color: var(--navy);
+  border: 1.5px solid rgba(2,27,126,.10);
+  box-shadow: 0 14px 26px rgba(2,27,126,.11), 0 2px 0 rgba(255,255,255,.75) inset;
   isolation: isolate;
 }
 .director-section::before {
   content: '';
   position: absolute;
-  inset: -40% -20%;
+  top: -12px;
+  left: 44px;
+  width: 86px;
+  height: 24px;
+  border-radius: 4px;
   background:
-    radial-gradient(circle at 26% 38%, rgba(143,219,251,.24), transparent 24%),
-    radial-gradient(circle at 80% 22%, rgba(245,233,114,.20), transparent 22%),
-    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-  background-size: auto, auto, 42px 42px;
-  transform: rotate(-10deg);
-  opacity: .8;
-  z-index: -1;
+    rgba(255,255,255,.58);
+  border: 1px solid rgba(2,27,126,.08);
+  box-shadow: 0 3px 10px rgba(0,0,0,.08);
+  transform: rotate(2deg);
+  z-index: 3;
 }
 .director-studio-head {
   display: grid;
   grid-template-columns: minmax(0,1fr) minmax(220px, .72fr);
   gap: 18px;
   align-items: end;
-  padding: 26px 24px 6px;
+  padding: 28px 24px 10px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.4), rgba(143,219,251,.08) 58%, rgba(230,82,10,.08)),
+    #fff6a8;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1.5px solid rgba(2,27,126,.08);
 }
 .director-kicker {
-  color: rgba(245,233,114,.92);
+  color: rgba(230,82,10,.78);
   font-size: .62rem;
   font-weight: 900;
   letter-spacing: .18em;
@@ -870,10 +875,12 @@ a{color:inherit;text-decoration:none;}
   line-height: .95;
   letter-spacing: .02em;
   font-weight: 900;
+  color: var(--navy);
+  text-shadow: 0 2px 0 rgba(255,255,255,.45);
 }
 .director-desc {
-  color: rgba(255,255,255,.70);
-  font-size: .72rem;
+  color: rgba(2,27,126,.64);
+  font-size: .78rem;
   line-height: 1.75;
 }
 .coverflow-shell {
@@ -924,9 +931,9 @@ a{color:inherit;text-decoration:none;}
   height: 100%;
   overflow: hidden;
   border-radius: 8px;
-  background: #111;
-  border: 1.5px solid rgba(255,255,255,.22);
-  box-shadow: 0 24px 56px rgba(0,0,0,.42);
+  background: linear-gradient(135deg, rgba(247,247,241,.96), rgba(255,255,255,.98));
+  border: 1.5px solid rgba(2,27,126,.10);
+  box-shadow: 0 10px 28px rgba(2,27,126,.10);
 }
 .cover-card-media::after {
   content: '';
@@ -939,8 +946,9 @@ a{color:inherit;text-decoration:none;}
 .cover-card video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  background: linear-gradient(135deg, rgba(247,247,241,.96), rgba(255,255,255,.98));
 }
 .cover-card.is-video .cover-card-media::before {
   content: 'PLAY';
@@ -948,8 +956,8 @@ a{color:inherit;text-decoration:none;}
   right: 12px;
   top: 12px;
   z-index: 2;
-  color: #050711;
-  background: rgba(245,233,114,.92);
+  color: var(--navy);
+  background: rgba(255,246,168,.92);
   border-radius: 100px;
   padding: 6px 9px;
   font-size: .58rem;
@@ -993,9 +1001,9 @@ a{color:inherit;text-decoration:none;}
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,.28);
-  background: rgba(255,255,255,.10);
-  color: #fff;
+  border: 1px solid rgba(2,27,126,.16);
+  background: rgba(255,255,255,.86);
+  color: var(--navy);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1004,7 +1012,7 @@ a{color:inherit;text-decoration:none;}
   transition: transform .2s, background .2s, color .2s;
 }
 .coverflow-arrow:hover,
-.coverflow-ctrl:hover { transform: translateY(-2px); background: rgba(245,233,114,.92); color: #050711; }
+.coverflow-ctrl:hover { transform: translateY(-2px); background: rgba(255,246,168,.92); color: var(--navy); }
 .coverflow-current {
   min-width: 0;
   text-align: center;
@@ -1013,7 +1021,7 @@ a{color:inherit;text-decoration:none;}
   line-height: 1.1;
   font-weight: 900;
   letter-spacing: .02em;
-  color: #fff;
+  color: var(--navy);
   transition: opacity .22s ease, transform .22s ease;
 }
 .coverflow-current.fade {
@@ -1024,7 +1032,7 @@ a{color:inherit;text-decoration:none;}
   display: block;
   margin-top: 7px;
   font-family: 'Inter','Noto Sans SC',sans-serif;
-  color: rgba(255,255,255,.54);
+  color: rgba(2,27,126,.54);
   font-size: .62rem;
   font-weight: 700;
   letter-spacing: .14em;
@@ -1791,8 +1799,8 @@ a{color:inherit;text-decoration:none;}
           <div class="director-kicker" data-zh="FILM DIRECTING PORTFOLIO" data-en="FILM DIRECTING PORTFOLIO">FILM DIRECTING PORTFOLIO</div>
           <h3 class="director-title" data-zh="视频导演作品集" data-en="Video Directing Portfolio">视频导演作品集</h3>
         </div>
-        <p class="director-desc" data-zh="3D 卡片流展示导演短片、商业TVC与音乐厂牌预热视频静帧；支持滚轮、拖拽、点击全屏展开与详情查看。" data-en="A 3D coverflow for short-film directing, commercial TVC stills and music-label teaser visuals, with wheel, drag, full-screen expansion and details.">
-          3D 卡片流展示导演短片、商业TVC与音乐厂牌预热视频静帧；支持滚轮、拖拽、点击全屏展开与详情查看。
+        <p class="director-desc" data-zh="导演、剪辑、AIGC作品" data-en="Directing, Editing, and AIGC Works">
+          导演、剪辑、AIGC作品
         </p>
       </div>
 
@@ -2277,7 +2285,7 @@ function closeDeckLB() {
   }, 300);
 }
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') { closeDeckLB(); closeDirectorLB(); }
+  if (e.key === 'Escape') { closeDeckLB(); }
 });
 
 /* ── DIRECTOR PORTFOLIO COVERFLOW ── */
