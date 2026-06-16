@@ -824,6 +824,259 @@ a{color:inherit;text-decoration:none;}
 .deck-lb-close:hover { background: var(--navy); color: #fff; }
 .deck-lb-img-wrap { overflow-y: auto; flex: 1; -webkit-overflow-scrolling: touch; }
 .deck-lb-img-wrap img { width: 100%; display: block; }
+.director-section {
+  margin-top: 38px;
+  border: 1.5px solid rgba(2,27,126,.10);
+  border-radius: 8px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.94), rgba(143,219,251,.16) 48%, rgba(245,233,114,.22)),
+    #fff;
+  box-shadow: 0 12px 34px rgba(2,27,126,.08);
+}
+.director-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: end;
+  padding: 22px 22px 16px;
+  border-bottom: 1.5px solid rgba(2,27,126,.08);
+}
+.director-kicker {
+  font-size: .62rem;
+  letter-spacing: .18em;
+  color: var(--rust);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.director-title {
+  font-family: 'CH','Noto Sans SC',sans-serif;
+  font-size: clamp(1.45rem, 4.2vw, 2.15rem);
+  line-height: 1.05;
+  color: var(--navy);
+  font-weight: 900;
+}
+.director-desc {
+  max-width: 420px;
+  color: rgba(2,27,126,.62);
+  font-size: .72rem;
+  line-height: 1.75;
+}
+.director-stage {
+  display: grid;
+  grid-template-columns: minmax(260px, .95fr) minmax(0, 1.2fr);
+  gap: 14px;
+  padding: 16px;
+}
+.director-video-card,
+.director-copy-card {
+  border-radius: 8px;
+  border: 1.5px solid rgba(2,27,126,.10);
+  background: rgba(255,255,255,.84);
+  overflow: hidden;
+}
+.director-video-card {
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+}
+.director-video-card video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  background: #111;
+}
+.director-video-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px 12px;
+  color: var(--navy);
+}
+.director-video-meta strong {
+  display: block;
+  font-size: .78rem;
+  line-height: 1.3;
+}
+.director-video-meta span {
+  display: block;
+  margin-top: 3px;
+  font-size: .62rem;
+  color: var(--mu);
+  line-height: 1.45;
+}
+.director-pill {
+  align-self: flex-start;
+  white-space: nowrap;
+  border: 1px solid rgba(230,82,10,.18);
+  color: var(--rust);
+  background: rgba(255,255,255,.7);
+  border-radius: 100px;
+  padding: 5px 9px;
+  font-size: .6rem;
+  font-weight: 800;
+}
+.director-copy-card {
+  padding: 15px;
+  display: grid;
+  align-content: center;
+  gap: 12px;
+}
+.director-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.director-point {
+  min-height: 88px;
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(2,27,126,.08);
+}
+.director-point b {
+  display: block;
+  color: var(--navy);
+  font-size: .7rem;
+  margin-bottom: 6px;
+}
+.director-point span {
+  display: block;
+  color: rgba(2,27,126,.60);
+  font-size: .62rem;
+  line-height: 1.55;
+}
+.director-rail-wrap {
+  padding: 0 16px 18px;
+}
+.director-rail {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  padding: 2px 2px 12px;
+  -webkit-overflow-scrolling: touch;
+}
+.director-rail::-webkit-scrollbar { height: 7px; }
+.director-rail::-webkit-scrollbar-thumb { background: rgba(2,27,126,.18); border-radius: 100px; }
+.director-frame {
+  flex: 0 0 clamp(210px, 32vw, 312px);
+  scroll-snap-align: start;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: zoom-in;
+  text-align: left;
+}
+.director-frame-inner {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid rgba(2,27,126,.10);
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(2,27,126,.07);
+  transition: transform .24s cubic-bezier(.34,1.56,.64,1), box-shadow .24s, border-color .24s;
+}
+.director-frame:hover .director-frame-inner {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(2,27,126,.13);
+  border-color: rgba(230,82,10,.24);
+}
+.director-frame img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.director-frame.portrait img { aspect-ratio: 3 / 4; }
+.director-caption {
+  padding: 8px 10px 10px;
+}
+.director-caption strong {
+  display: block;
+  color: var(--navy);
+  font-size: .68rem;
+  line-height: 1.35;
+}
+.director-caption span {
+  display: block;
+  margin-top: 2px;
+  color: var(--mu);
+  font-size: .6rem;
+  line-height: 1.45;
+}
+.director-lb {
+  position: fixed;
+  inset: 0;
+  z-index: 1300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.director-lb.open { display: flex; }
+.director-lb-mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.84);
+  backdrop-filter: blur(16px);
+  cursor: pointer;
+}
+.director-lb-box {
+  position: relative;
+  z-index: 1;
+  width: min(980px, 95vw);
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 30px 90px rgba(0,0,0,.52);
+}
+.director-lb-img {
+  min-height: 0;
+  background: #050505;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.director-lb-img img {
+  width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+}
+.director-lb-info {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-left: 1.5px solid var(--bd);
+}
+.director-lb-info strong {
+  color: var(--navy);
+  font-size: .9rem;
+  line-height: 1.35;
+}
+.director-lb-info span {
+  color: var(--mu);
+  font-size: .68rem;
+  line-height: 1.65;
+}
+.director-lb-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid var(--bd);
+  background: #fff;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+.director-lb-close:hover { background: var(--navy); color: #fff; }
 @media (max-width: 600px) {
   .audience-flow { grid-template-columns: 1fr; }
   .aud-arrow { transform: rotate(90deg); min-height: 36px; }
@@ -833,6 +1086,13 @@ a{color:inherit;text-decoration:none;}
   .ip-overview-grid { grid-template-columns: 1fr; }
   .deck-grid { grid-template-columns: repeat(2, 1fr); }
   .deck-cover { padding: 22px 18px; min-height: 110px; }
+  .director-head,.director-stage { grid-template-columns: 1fr; }
+  .director-head { align-items: start; padding: 18px; }
+  .director-stage { padding: 12px; }
+  .director-points { grid-template-columns: 1fr; }
+  .director-frame { flex-basis: 78vw; }
+  .director-lb-box { grid-template-columns: 1fr; }
+  .director-lb-info { border-left: 0; border-top: 1.5px solid var(--bd); }
 }
 @media (max-width: 380px) {
   .social-grid,.poster-grid { grid-template-columns: 1fr; }
@@ -1463,6 +1723,86 @@ a{color:inherit;text-decoration:none;}
         </div>
       </div>
     </div>
+
+    <section class="director-section rv" id="director-portfolio">
+      <div class="director-head">
+        <div>
+          <div class="director-kicker" data-zh="FILM DIRECTING PORTFOLIO" data-en="FILM DIRECTING PORTFOLIO">FILM DIRECTING PORTFOLIO</div>
+          <h3 class="director-title" data-zh="视频导演作品集" data-en="Video Directing Portfolio">视频导演作品集</h3>
+        </div>
+        <p class="director-desc" data-zh="以影像叙事、人物情绪和品牌调性为核心，展示从学生导演作品到商业TVC、音乐厂牌短片的画面控制与内容表达能力。" data-en="A curated view of visual storytelling, emotional direction and brand tone across a student short film, commercial TVC frames and music-label teaser work.">
+          以影像叙事、人物情绪和品牌调性为核心，展示从学生导演作品到商业TVC、音乐厂牌短片的画面控制与内容表达能力。
+        </p>
+      </div>
+
+      <div class="director-stage">
+        <article class="director-video-card">
+          <video controls preload="metadata" poster="video-directing/stills/by-tintin-02.jpg">
+            <source src="video-directing/video/emotional-bliss-web.m4v" type="video/mp4">
+          </video>
+          <div class="director-video-meta">
+            <div>
+              <strong data-zh="《Emotional Bliss》导演作品" data-en="Emotional Bliss · Directed Work">《Emotional Bliss》导演作品</strong>
+              <span data-zh="北京电影学院课程作品 · 导演 / 影像叙事 / 情绪调度" data-en="Beijing Film Academy coursework · directing / visual storytelling / emotional pacing">北京电影学院课程作品 · 导演 / 影像叙事 / 情绪调度</span>
+            </div>
+            <span class="director-pill" data-zh="点击播放" data-en="Play">点击播放</span>
+          </div>
+        </article>
+        <article class="director-copy-card">
+          <div class="director-points">
+            <div class="director-point">
+              <b data-zh="导演表达" data-en="Direction">导演表达</b>
+              <span data-zh="把抽象情绪转译为可感知的空间、节奏与人物状态。" data-en="Translates abstract emotion into space, pacing and character state.">把抽象情绪转译为可感知的空间、节奏与人物状态。</span>
+            </div>
+            <div class="director-point">
+              <b data-zh="商业审美" data-en="Commercial Eye">商业审美</b>
+              <span data-zh="适配品牌视觉语言，控制画面质感、构图和氛围。" data-en="Adapts brand visual language through texture, composition and atmosphere.">适配品牌视觉语言，控制画面质感、构图和氛围。</span>
+            </div>
+            <div class="director-point">
+              <b data-zh="社媒转化" data-en="Social Fit">社媒转化</b>
+              <span data-zh="将短片、静帧与预热视频拆解为可传播的社媒内容资产。" data-en="Turns films, stills and teasers into shareable social content assets.">将短片、静帧与预热视频拆解为可传播的社媒内容资产。</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="director-rail-wrap">
+        <div class="director-rail" aria-label="视频导演作品静帧">
+          <button class="director-frame" type="button" data-src="video-directing/stills/by-tintin-01.jpg" data-title="BY TINTIN · 人物情绪" data-desc="以人物状态和空间留白建立叙事气质，强调镜头内的沉默张力。">
+            <span class="director-frame-inner"><img src="video-directing/stills/by-tintin-01.jpg" alt="BY TINTIN 人物情绪静帧" loading="lazy"><span class="director-caption"><strong>BY TINTIN</strong><span>人物情绪 · 空间叙事</span></span></span>
+          </button>
+          <button class="director-frame" type="button" data-src="video-directing/stills/by-tintin-02.jpg" data-title="BY TINTIN · 画面控制" data-desc="以构图、色彩和动作调度强化人物关系，形成干净克制的视觉表达。">
+            <span class="director-frame-inner"><img src="video-directing/stills/by-tintin-02.jpg" alt="BY TINTIN 画面控制静帧" loading="lazy"><span class="director-caption"><strong>BY TINTIN</strong><span>构图 · 色彩 · 调度</span></span></span>
+          </button>
+          <button class="director-frame" type="button" data-src="video-directing/stills/by-tintin-03.jpg" data-title="BY TINTIN · 情绪节奏" data-desc="通过镜头节奏与人物停顿制造观看悬念，适合延展为社媒短视频叙事。">
+            <span class="director-frame-inner"><img src="video-directing/stills/by-tintin-03.jpg" alt="BY TINTIN 情绪节奏静帧" loading="lazy"><span class="director-caption"><strong>BY TINTIN</strong><span>情绪节奏 · 叙事停顿</span></span></span>
+          </button>
+          <button class="director-frame" type="button" data-src="video-directing/stills/mercedes-tvc-01.jpg" data-title="Mercedes TVC · 商业质感" data-desc="商业TVC静帧展示，突出品牌质感、画面秩序和高级生活方式氛围。">
+            <span class="director-frame-inner"><img src="video-directing/stills/mercedes-tvc-01.jpg" alt="Mercedes TVC 商业质感静帧" loading="lazy"><span class="director-caption"><strong>Mercedes TVC</strong><span>商业质感 · 品牌氛围</span></span></span>
+          </button>
+          <button class="director-frame" type="button" data-src="video-directing/stills/mercedes-tvc-02.jpg" data-title="Mercedes TVC · 场景调性" data-desc="通过场景关系和光线控制建立品牌叙事，兼顾视觉高级感与传播清晰度。">
+            <span class="director-frame-inner"><img src="video-directing/stills/mercedes-tvc-02.jpg" alt="Mercedes TVC 场景调性静帧" loading="lazy"><span class="director-caption"><strong>Mercedes TVC</strong><span>场景调性 · 光线控制</span></span></span>
+          </button>
+          <button class="director-frame portrait" type="button" data-src="video-directing/stills/yinyang-teaser-01.jpg" data-title="YINYANG Teaser · 社媒短片" data-desc="服务音乐厂牌传播的竖版预热视频视觉，适配移动端平台与内容预热节奏。">
+            <span class="director-frame-inner"><img src="video-directing/stills/yinyang-teaser-01.jpg" alt="YINYANG Teaser 竖版静帧" loading="lazy"><span class="director-caption"><strong>YINYANG Teaser</strong><span>竖版短片 · 社媒预热</span></span></span>
+          </button>
+        </div>
+      </div>
+
+      <div id="director-lb" class="director-lb">
+        <div class="director-lb-mask" onclick="closeDirectorLB()"></div>
+        <div class="director-lb-box">
+          <div class="director-lb-img"><img id="director-lb-img" src="" alt="视频导演作品静帧大图"></div>
+          <div class="director-lb-info">
+            <button class="director-lb-close" onclick="closeDirectorLB()" aria-label="关闭">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2 2l11 11M13 2L2 13" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+            </button>
+            <strong id="director-lb-title">视频导演作品</strong>
+            <span id="director-lb-desc">点击静帧查看导演作品说明。</span>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
 </div><!-- /tl -->
@@ -1884,8 +2224,39 @@ function closeDeckLB() {
   }, 300);
 }
 document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') { closeDeckLB(); }
+  if (e.key === 'Escape') { closeDeckLB(); closeDirectorLB(); }
 });
+
+/* ── DIRECTOR PORTFOLIO LIGHTBOX ── */
+document.addEventListener('click', function(e) {
+  var frame = e.target.closest ? e.target.closest('.director-frame') : null;
+  if (!frame) return;
+  openDirectorLB(
+    frame.getAttribute('data-src'),
+    frame.getAttribute('data-title') || '视频导演作品',
+    frame.getAttribute('data-desc') || ''
+  );
+});
+
+function openDirectorLB(src, title, desc) {
+  var lb = document.getElementById('director-lb');
+  if (!lb || !src) return;
+  document.getElementById('director-lb-img').src = src;
+  document.getElementById('director-lb-title').textContent = title;
+  document.getElementById('director-lb-desc').textContent = desc;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDirectorLB() {
+  var lb = document.getElementById('director-lb');
+  if (!lb) return;
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+  setTimeout(function() {
+    var img = document.getElementById('director-lb-img');
+    if (img) img.src = '';
+  }, 250);
+}
 </script>
 </body>
 </html>
